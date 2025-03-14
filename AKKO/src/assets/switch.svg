@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 开关主体 -->
+  <rect x="25" y="35" width="50" height="30" rx="5" fill="#333" stroke="#222" stroke-width="1"/>
+  
+  <!-- 开关轴心 -->
+  <rect x="35" y="25" width="30" height="50" rx="2" fill="#555" stroke="#222" stroke-width="1"/>
+  
+  <!-- 开关顶部 -->
+  <rect x="40" y="15" width="20" height="10" rx="2" fill="#888" stroke="#222" stroke-width="1"/>
+  
+  <!-- 开关底部连接点 -->
+  <rect x="45" y="75" width="10" height="10" fill="#222" stroke="#111" stroke-width="1"/>
+  <rect x="43" y="85" width="14" height="5" fill="#111"/>
+</svg> 

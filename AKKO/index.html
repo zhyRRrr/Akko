@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
+      <title>AKKO</title>
+      <!-- 添加Swiper CSS -->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      />
+      <link rel="stylesheet" href="./src/style/fonts.css" />
+      <!-- 引入网站样式 -->
+      <link rel="stylesheet" href="./src/style.css" />
+      <!-- 引入轮播图样式 -->
+      <link rel="stylesheet" href="./src/carousel.css" />
+      <!-- 引入产品网格样式 -->
+      <link rel="stylesheet" href="./src/productGrid.css" />
+      <!-- 引入热销产品样式 -->
+      <link rel="stylesheet" href="./src/style/BestSellingProducts.css" />
+      <!-- 引入背景图片样式 -->
+      <link rel="stylesheet" href="./src/style/backgroundImage.css" />
+      <!-- 引入下方背景图片样式 -->
+      <link rel="stylesheet" href="./src/style/backgroundImageDown.css" />
+      <!-- 引入IP合作样式 -->
+      <link rel="stylesheet" href="./src/style/ipCollaboration.css" />
+      <!-- 引入键盘展示样式 -->
+      <link rel="stylesheet" href="./src/style/KeyboardShowcase.css" />
+      <!-- 引入图片弹性布局样式 -->
+      <link rel="stylesheet" href="./src/style/imageFlex.css" />
+   </head>
+   <body id="largepage">
+      <div id="app" class="pc-wrapper">
+         <!-- 轮播图容器 -->
+         <!-- <div class="carousel-container"> -->
+         <!-- 轮播图内容将由JS动态生成 -->
+         <!-- </div> -->
+
+         <!-- 产品网格容器 -->
+         <div class="product-grid-container row">
+            <div class="grid-layout">
+               <!-- 键盘区域 -->
+               <div class="grid-item keyboards">
+                  <h2>KEYBOARDS</h2>
+                  <div class="image-container">
+                     <img
+                        src="https://en.akkogear.com/wp-content/uploads/2025/03/MU02-Mechanical-Keyboard.png"
+                        alt="键盘"
+                     />
+                  </div>
+                  <div class="upshadow"></div>
+               </div>
+
+               <!-- 鼠标区域 -->
+               <div class="grid-item mouse">
+                  <h2>MOUSE</h2>
+                  <div class="image-container">
+                     <img
+                        src="https://en.akkogear.com/wp-content/uploads/2025/03/Mouse-Pulse01.png"
+                        alt="鼠标"
+                     />
+                  </div>
+               </div>
+
+               <!-- DIY套件区域 -->
+               <div class="grid-item diy-kit">
+                  <h2>DIY KIT</h2>
+                  <div class="image-container shadow">
+                     <img
+                        src="https://en.akkogear.com/wp-content/uploads/2025/03/5075B-Via-customize-keyboard.png"
+                        alt="DIY套件"
+                     />
+                  </div>
+                  <div class="bottomshadow"></div>
+               </div>
+
+               <!-- 开关区域 -->
+               <div class="grid-item switch">
+                  <h2>SWITCH</h2>
+                  <div class="image-container">
+                     <img
+                        src="https://en.akkogear.com/wp-content/uploads/2025/03/Rosewood.png"
+                        alt="开关"
+                     />
+                  </div>
+               </div>
+
+               <!-- 键帽区域 -->
+               <div class="grid-item keycaps">
+                  <h2>KEYCAPS</h2>
+                  <div class="image-container">
+                     <img
+                        src="https://en.akkogear.com/wp-content/uploads/2025/03/Keycaps.png"
+                        alt="键帽"
+                     />
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 热销产品容器 -->
+         <div class="best-selling-container row">
+            <!-- 标题区域 -->
+            <div class="title-container">
+               <div class="title">
+                  BEST SELLING PRODUCTS/<span class="mobile-break"
+                     >TOP SELLING</span
+                  >
+               </div>
+            </div>
+
+            <!-- 分类选择区域 -->
+            <div class="best-selling-categories">
+               <div class="categories-container">
+                  <div class="category-item active" data-category="Keyboard">
+                     Keyboard
+                  </div>
+                  <div class="category-item" data-category="Barebone">
+                     Barebone
+                  </div>
+                  <div class="category-item" data-category="Kit">Kit</div>
+                  <div class="category-item" data-category="KeySwitches">
+                     KeySwitches
+                  </div>
+                  <div class="category-item" data-category="Mice">Mice</div>
+                  <div class="category-item" data-category="Keycaps">
+                     Keycaps
+                  </div>
+               </div>
+            </div>
+
+            <!-- PC端产品展示区域 -->
+            <div class="products-container">
+               <div class="products-wrapper">
+                  <!-- 产品卡片将由JS填充 -->
+               </div>
+            </div>
+            <div class="indicators">
+               <!-- 指示器将由JS填充 -->
+            </div>
+
+            <!-- 移动端产品展示区域 -->
+            <div class="mobile-products-container" style="display: none">
+               <div class="mobile-products-wrapper">
+                  <!-- 移动端产品卡片将由JS填充 -->
+               </div>
+            </div>
+            <div class="mobile-indicators" style="display: none">
+               <!-- 移动端指示器将由JS填充 -->
+            </div>
+         </div>
+
+         <!-- 背景图片容器 -->
+         <div class="background-image-container">
+            <!-- PC端展示 -->
+            <div class="background-image pc-background">
+               <button class="check-more-btn">Check More</button>
+            </div>
+
+            <!-- 移动端轮播 -->
+            <div class="mobile-background-container">
+               <div class="swiper mobile-background-swiper">
+                  <div class="swiper-wrapper">
+                     <!-- 图片1 -->
+                     <div class="swiper-slide mobile-background-slide">
+                        <div class="mobile-background-image">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/SJ-MAGNETIC-SWITCHES-1.jpg"
+                              alt="MAGNETIC SWITCHES"
+                           />
+                        </div>
+                     </div>
+
+                     <!-- 图片2 -->
+                     <div class="swiper-slide mobile-background-slide">
+                        <div class="mobile-background-image">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/Snap-Keys.jpg"
+                              alt="Snap Keys"
+                           />
+                        </div>
+                     </div>
+
+                     <!-- 图片3 -->
+                     <div class="swiper-slide mobile-background-slide">
+                        <div class="mobile-background-image">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/SJ-RAPID-TRIGGER-1.jpg"
+                              alt="RAPID TRIGGER"
+                           />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 下方背景图片容器 -->
+         <div class="background-image-down-container">
+            <!-- PC端展示 -->
+            <div class="background-image-down">
+               <button class="check-more-btn">Check More</button>
+            </div>
+            <!-- 移动端展示 -->
+            <div class="mobile-background-image-down">
+               <!-- 移除移动端按钮 -->
+            </div>
+         </div>
+
+         <!-- IP合作容器 -->
+         <div class="ip-collaboration-container">
+            <!-- PC端展示 -->
+            <div class="text-container">
+               <h1 class="main-title">IPCOLLABORATION</h1>
+               <p class="sub-title">Type with Your Favorite Characters</p>
+               <button class="check-more-btn">Check More</button>
+            </div>
+
+            <!-- 移动端展示 -->
+            <div class="mobile-text-container">
+               <h1 class="mobile-main-title">IPCOLLABORATION</h1>
+               <p class="mobile-sub-title">
+                  Type with Your Favorite Characters
+               </p>
+               <button class="mobile-check-more-btn">Check More</button>
+            </div>
+         </div>
+
+         <!-- 键盘展示容器 -->
+         <div class="keyboard-showcase-container">
+            <!-- PC端展示 -->
+            <div class="container">
+               <div class="keyboard-showcase">
+                  <div class="keyboard-grid">
+                     <!-- 左侧大图 Cinnamoroll -->
+                     <div class="keyboard-card cinnamoroll">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/Cinnamoroll-600x720-1.jpg"
+                           alt="Cinnamoroll"
+                        />
+                        <div class="card-label">Cinnamoroll</div>
+                     </div>
+
+                     <!-- 右上 Pompompurin -->
+                     <div class="keyboard-card pompompurin">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/pompompurin-815x348-1.jpg"
+                           alt="Pompompurin"
+                        />
+                        <div class="card-label">Pompompurin</div>
+                     </div>
+
+                     <!-- 右中左 Kuromi -->
+                     <div class="keyboard-card kuromi">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/Kuromi-395x348-1.jpg"
+                           alt="Kuromi"
+                        />
+                        <div class="card-label">Kuromi</div>
+                     </div>
+
+                     <!-- 右中右 My Sweet Piano -->
+                     <div class="keyboard-card my-sweet-piano">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/Piano-395x348-1.jpg"
+                           alt="My Sweet Piano"
+                        />
+                        <div class="card-label">My Sweet Piano</div>
+                     </div>
+
+                     <!-- 右上角 The King's Avatar -->
+                     <div class="keyboard-card kings-avatar">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/The-Kings-Avatar-320x246-1.jpg"
+                           alt="The King's Avatar"
+                        />
+                        <div class="card-label">The King's Avatar</div>
+                     </div>
+
+                     <!-- 右下 Joy of Life -->
+                     <div class="keyboard-card joy-of-life">
+                        <img
+                           src="https://en.akkogear.com/wp-content/uploads/2025/03/Joy-of-life-320x450-1.jpg"
+                           alt="Joy of Life"
+                        />
+                        <div class="card-label">Joy of Life</div>
+                     </div>
+                  </div>
+                  <div class="keyboard-mask"></div>
+               </div>
+            </div>
+
+            <!-- 移动端轮播 -->
+            <div class="mobile-showcase-container">
+               <div class="swiper mobile-showcase-swiper">
+                  <div class="swiper-wrapper">
+                     <!-- Cinnamoroll -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/Cinnamoroll-600x720-1.jpg"
+                              alt="Cinnamoroll"
+                           />
+                           <div class="card-label">Cinnamoroll</div>
+                        </div>
+                     </div>
+
+                     <!-- Pompompurin -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/pompompurin-815x348-1.jpg"
+                              alt="Pompompurin"
+                           />
+                           <div class="card-label">Pompompurin</div>
+                        </div>
+                     </div>
+
+                     <!-- Kuromi -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/Kuromi-395x348-1.jpg"
+                              alt="Kuromi"
+                           />
+                           <div class="card-label">Kuromi</div>
+                        </div>
+                     </div>
+
+                     <!-- My Sweet Piano -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/Piano-395x348-1.jpg"
+                              alt="My Sweet Piano"
+                           />
+                           <div class="card-label">My Sweet Piano</div>
+                        </div>
+                     </div>
+
+                     <!-- The King's Avatar -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/The-Kings-Avatar-320x246-1.jpg"
+                              alt="The King's Avatar"
+                           />
+                           <div class="card-label">The King's Avatar</div>
+                        </div>
+                     </div>
+
+                     <!-- Joy of Life -->
+                     <div class="swiper-slide mobile-showcase-slide">
+                        <div class="mobile-keyboard-card">
+                           <img
+                              src="https://en.akkogear.com/wp-content/uploads/2025/03/Joy-of-life-320x450-1.jpg"
+                              alt="Joy of Life"
+                           />
+                           <div class="card-label">Joy of Life</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 自定义移动端指示器 -->
+               <div class="mobile-indicators">
+                  <div class="mobile-indicator mobile-indicator-active"></div>
+                  <div class="mobile-indicator"></div>
+                  <div class="mobile-indicator"></div>
+                  <div class="mobile-indicator"></div>
+                  <div class="mobile-indicator"></div>
+                  <div class="mobile-indicator"></div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 图片弹性容器 -->
+         <div class="image-flex-container">
+            <div class="image-flex-wrapper">
+               <div class="image-card left-image">
+                  <img
+                     src="https://en.akkogear.com/wp-content/uploads/2025/03/Mechanical-Keyboard-discord.png"
+                     alt="左侧图片"
+                  />
+               </div>
+               <div class="image-card right-image">
+                  <img
+                     src="https://en.akkogear.com/wp-content/uploads/2025/03/Mechanical-Keyboard-Affiliate.png"
+                     alt="右侧图片"
+                  />
+               </div>
+            </div>
+         </div>
+
+         <!-- 保留其他内容，这里会由JS负责填充其余Vue组件转换后的HTML结构 -->
+      </div>
+
+      <!-- 引入Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <!-- 引入轮播图JS -->
+      <script src="./src/carousel.js"></script>
+      <!-- 引入产品数据(必须先于其他产品相关JS加载) -->
+      <script src="./src/data/products.js"></script>
+      <!-- 引入产品网格JS - 只保留响应式处理 -->
+      <script src="./src/productGrid.js"></script>
+      <!-- 引入热销产品JS -->
+      <script src="./src/bestSellingProducts.js"></script>
+      <!-- 引入背景图片JS -->
+      <script src="./src/backgroundImage.js"></script>
+      <!-- 引入下方背景图片JS -->
+      <script src="./src/backgroundImageDown.js"></script>
+      <!-- 引入IP合作JS -->
+      <script src="./src/ipCollaboration.js"></script>
+      <!-- 引入键盘展示JS -->
+      <script src="./src/keyboardShowcase.js"></script>
+      <!-- 引入图片弹性布局JS -->
+      <script src="./src/imageFlex.js"></script>
+      <!-- 引入主JS -->
+      <script src="./src/main.js"></script>
+
+      <script>
+         // 添加PC端固定宽度处理
+         function handlePcLayout() {
+            const pcWrapper = document.querySelector(".pc-wrapper");
+            if (window.innerWidth <= 768) {
+               pcWrapper.style.width = "100%";
+            } else {
+               pcWrapper.style.width = "1920px";
+            }
+         }
+
+         // 初始化时执行一次
+         handlePcLayout();
+
+         // 监听窗口大小变化
+         window.addEventListener("resize", handlePcLayout);
+      </script>
+   </body>
+</html>

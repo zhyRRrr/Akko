@@ -1,0 +1,32 @@
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="40" width="260" height="80" rx="5" fill="#e0e0e0" stroke="#333" stroke-width="2"/>
+  <!-- 键盘按键 -->
+  <g fill="#f5f5f5" stroke="#333" stroke-width="1">
+    <!-- 第一行按键 -->
+    <rect x="30" y="50" width="20" height="20" rx="2"/>
+    <rect x="55" y="50" width="20" height="20" rx="2"/>
+    <rect x="80" y="50" width="20" height="20" rx="2"/>
+    <rect x="105" y="50" width="20" height="20" rx="2"/>
+    <rect x="130" y="50" width="20" height="20" rx="2"/>
+    <rect x="155" y="50" width="20" height="20" rx="2"/>
+    <rect x="180" y="50" width="20" height="20" rx="2"/>
+    <rect x="205" y="50" width="20" height="20" rx="2"/>
+    <rect x="230" y="50" width="20" height="20" rx="2"/>
+    <rect x="255" y="50" width="20" height="20" rx="2"/>
+    
+    <!-- 第二行按键 -->
+    <rect x="30" y="75" width="20" height="20" rx="2"/>
+    <rect x="55" y="75" width="20" height="20" rx="2"/>
+    <rect x="80" y="75" width="20" height="20" rx="2"/>
+    <rect x="105" y="75" width="20" height="20" rx="2"/>
+    <rect x="130" y="75" width="20" height="20" rx="2"/>
+    <rect x="155" y="75" width="20" height="20" rx="2"/>
+    <rect x="180" y="75" width="20" height="20" rx="2"/>
+    <rect x="205" y="75" width="20" height="20" rx="2"/>
+    <rect x="230" y="75" width="20" height="20" rx="2"/>
+    <rect x="255" y="75" width="20" height="20" rx="2"/>
+    
+    <!-- 第三行按键 -->
+    <rect x="30" y="100" width="245" height="15" rx="2"/>
+  </g>
+</svg> 

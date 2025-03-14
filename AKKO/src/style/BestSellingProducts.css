@@ -1,0 +1,591 @@
+.best-selling-container {
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-top: 104px;
+    box-sizing: border-box;
+    background: rgb(250, 251, 252);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container {
+    width: 100%;
+    max-width: 739px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Poppins-Medium', 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.5;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 8px 0 0;
+    opacity: 0.7;
+}
+
+.categories-container {
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.category-item {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 0;
+    position: relative;
+    margin: 0 28px; /* 56px的间距，每边28px */
+    color: #969797;
+}
+
+.category-item.active {
+    color: #6f5cae;
+    font-weight: 700;
+}
+
+.category-item.active::after {
+    content: none;
+}
+
+.category-item:hover {
+    opacity: 0.8;
+}
+
+.products-container {
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1780px; /* 5个卡片(每个340px)加上4个间隔(每个20px)的总宽度 */
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: nowrap; /* 防止卡片换行 */
+}
+
+.product-card {
+    width: 340px; /* 稍微减小宽度，确保5个卡片能在一行显示 */
+    height: 440px;
+    background: rgb(244, 246, 249);
+    border-radius: 6px;
+    padding: 24px;
+    position: relative;
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0; /* 防止卡片缩小 */
+}
+
+.product-card.masked::before {
+    display: none;
+}
+
+.product-image {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 340px; /* 匹配卡片宽度 */
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    position: relative;
+    z-index: 1;
+}
+
+.product-details {
+    position: absolute;
+    top: 323px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.product-title {
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    margin-top: 44px;
+}
+
+.product-title.has-subtitle {
+    font-size: 21px;
+    line-height: 30px;
+    margin-top: 38px;
+}
+
+.product-title:not(.has-subtitle) {
+    line-height: 28.13px;
+    margin-top: 44px;
+}
+
+.product-subtitle {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: #000000;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+
+.star::before {
+    content: "★";
+    position: absolute;
+    font-size: 24px;
+    color: #ffcb47;
+    line-height: 24px;
+}
+
+.review-count {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    line-height: 19px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+}
+
+.current-price {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    line-height: 21px;
+}
+
+.original-price {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #959595;
+    line-height: 16px;
+    text-decoration-line: line-through;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 56px;
+    margin-bottom: 20px;
+}
+
+.indicator {
+    height: 3px;
+    background: #B6B6B6;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:not(.active) {
+    width: 12px;
+}
+
+.indicator.active {
+    width: 22px;
+    background: #000000;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .best-selling-container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: calc(32 * 100vw / 375);
+        background: rgb(250, 251, 252);
+        overflow-x: hidden;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: none;
+    }
+    
+    .title-container {
+        all: initial;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto calc(20 * 100vw / 375) auto; /* 20px */
+        text-align: center;
+    }
+    
+    .title {
+        all: initial;
+        display: block;
+        font-family: 'Poppins-Medium', 'Poppins', sans-serif;
+        font-size: calc(20 * 100vw / 375); /* 20px */
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+        color: #000;
+        line-height: 1.5;
+    }
+
+    .mobile-break {
+        display: block;
+        margin-top: calc(5 * 100vw / 375); /* 5px */
+    }
+    
+    /* 移动端分类滑动区域样式 */
+    .best-selling-categories {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-left: calc(30 * 100vw / 375);
+    }
+    
+    .categories-container {
+        all: initial;
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 calc(14 * 100vw / 375); /* 14px */
+        box-sizing: border-box;
+        margin: calc(16 * 100vw / 375) 0; /* 16px 上下间距 */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        -webkit-overflow-scrolling: touch; /* 增强iOS触摸滚动 */
+        scroll-behavior: smooth; /* 平滑滚动 */
+        scroll-snap-type: x mandatory; /* 滚动吸附 */
+        position: relative;
+    }
+    
+    .categories-container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .category-item {
+        all: initial;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: calc(14 * 100vw / 375); /* 14px */
+        font-weight: 500;
+        margin-right: calc(20 * 100vw / 375); /* 增加间距使滑动更明显 */
+        padding: calc(4 * 100vw / 375) 0; /* 4px */
+        cursor: pointer;
+        color: #969797; /* 默认灰色 */
+        white-space: nowrap;
+        scroll-snap-align: start; /* 滚动对齐 */
+        position: relative;
+    }
+    
+    .category-item:first-child {
+        color: #969797; /* 默认灰色，与其他分类项一致 */
+        margin-left: calc(20 * 100vw / 375); /* 添加10px左边距 */
+    }
+    
+    .category-item:last-child {
+        margin-right: calc(14 * 100vw / 375); /* 最后一项右侧留出空间 */
+    }
+    
+    .category-item.active {
+        color: #6F5CAE; /* 选中时为紫色 */
+        font-family: 'Poppins-Bold', 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+    
+    /* 添加滑动提示动画 */
+    @keyframes slideHint {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(-10px); }
+        40% { transform: translateX(10px); }
+        60% { transform: translateX(-5px); }
+        80% { transform: translateX(5px); }
+        100% { transform: translateX(0); }
+    }
+    
+    /* 页面加载时显示一次滑动提示 */
+    .categories-container {
+        animation: slideHint 1.5s ease-in-out 1s 1;
+    }
+    
+    .mobile-products-container {
+        width: 100%;
+        padding: 0 calc(14 * 100vw / 375); /* 14px 左右外边距 */
+        box-sizing: border-box;
+        margin-top: calc(20 * 100vw / 375); /* 20px */
+        position: relative;
+        overflow: hidden; /* 添加溢出隐藏 */
+    }
+    
+    .mobile-swiper {
+        width: 100%;
+        height: auto;
+    }
+    
+    .mobile-slide {
+        width: calc(170 * 100vw / 375) !important; /* 170px */
+        height: calc(210 * 100vw / 375) !important; /* 210px */
+    }
+    
+    .mobile-product-card {
+        width: calc(170 * 100vw / 375); /* 170px */
+        height: calc(210 * 100vw / 375); /* 210px */
+        background: rgb(244, 246, 249);
+        border-radius: calc(6 * 100vw / 375); /* 6px */
+        padding: 0;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden; /* 确保内容不会溢出 */
+    }
+    
+    .mobile-product-card .product-info {
+        position: absolute;
+        top: calc(38 * 100vw / 375); /* 38px - 恢复原始值 */
+        left: 0;
+        right: 0;
+        z-index: 2;
+        text-align: center;
+    }
+    
+    .mobile-product-card .product-title {
+        font-family: 'Poppins', 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: calc(14 * 100vw / 375); /* 14px */
+        color: #000000;
+        text-align: center;
+        margin: 0;
+        line-height: calc(16 * 100vw / 375); /* 16px */
+        font-style: normal;
+        text-transform: none;
+    }
+    
+    .mobile-product-card .product-title.has-subtitle {
+        font-size: calc(12 * 100vw / 375); /* 12px */
+        margin-bottom: calc(2 * 100vw / 375); /* 2px */
+    }
+    
+    .mobile-product-card .product-subtitle {
+        font-family: 'Poppins', 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: calc(12 * 100vw / 375); /* 12px */
+        color: #000000;
+        text-align: center;
+        margin: 0;
+        line-height: calc(16 * 100vw / 375); /* 16px */
+        font-style: normal;
+        text-transform: none;
+    }
+    
+    .mobile-product-card .product-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(170 * 100vw / 375); /* 170px */
+        height: calc(176.83 * 100vw / 375); /* 176.83px */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    
+    .mobile-product-card .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    
+    .mobile-product-card .mobile-product-details {
+        position: absolute;
+        bottom: calc(20 * 100vw / 375); /* 将固定像素改为相对单位 */
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobile-product-card .stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(2 * 100vw / 375); /* 调整为适当的间距 */ 
+    }
+    
+    .mobile-product-card .star {
+        width: calc(10 * 100vw / 375);
+        height: calc(10 * 100vw / 375);
+        color: #FFD700;
+    }
+    
+    .mobile-product-card .star::before {
+        font-size: calc(10 * 100vw / 375);
+    }
+    
+    .mobile-product-card .review-count {
+        font-family: 'Poppins', sans-serif;
+        font-size: calc(10 * 100vw / 375); /* 10px */
+        color: #666666;
+        font-weight: 800;
+    }
+    
+    .mobile-product-card .price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(2 * 100vw / 375); /* 2px */
+    }
+    
+    .mobile-product-card .current-price {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: calc(12 * 100vw / 375); /* 12px */
+        color: #000000;
+        line-height: calc(11.72 * 100vw / 375);
+    }
+    
+    .mobile-product-card .original-price {
+        font-family: 'Poppins', sans-serif;
+        font-size: calc(10 * 100vw / 375); /* 10px */
+        color: #999999;
+        text-decoration: line-through;
+    }
+
+    .mobile-product-card .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(8 * 100vw / 375);
+        margin: 0;
+        margin-bottom: calc(6 * 100vw / 375);
+    }
+
+    .mobile-indicators {
+        display: flex;
+        justify-content: center;
+        gap: calc(12 * 100vw / 375);
+        margin-top: calc(20 * 100vw / 375);
+    }
+    
+    .mobile-indicator {
+        width: calc(12 * 100vw / 375);
+        height: calc(3 * 100vw / 375);
+        background: #B6B6B6;
+        border-radius: 0px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-indicator-active {
+        width: calc(22 * 100vw / 375);
+        background: #000000;
+    }
+    
+    .mobile-products-container {
+        width: 100%;
+        padding: 0 calc(14 * 100vw / 375); /* 14px 左右外边距 */
+        box-sizing: border-box;
+        margin-top: calc(20 * 100vw / 375); /* 20px */
+        position: relative;
+    }
+    
+    .mobile-products-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: calc(10 * 100vw / 375);
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden; /* 添加溢出隐藏 */
+    }
+    
+    .products-container,
+    .indicators {
+        display: none !important;
+    }
+}
+
+/* 移动端产品展示样式 - 全局 */
+.mobile-products-wrapper {
+    display: flex;
+    justify-content: center; /* 改为居中 */
+    gap: calc(10 * 100vw / 375); /* 添加间距 */
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* 添加溢出隐藏 */
+}

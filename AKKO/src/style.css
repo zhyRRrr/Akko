@@ -1,0 +1,144 @@
+.largepage {
+  background-color: rgb(155, 155, 155);
+}
+
+:root {
+  /* 颜色变量 */
+  --primary-color: #6b5b95;
+  --text-color: #213547;
+  --bg-color: #ffffff;
+  --secondary-bg: #f9f9f9;
+  --border-color: #646cff;
+  
+  /* 固定尺寸变量 - PC端使用固定像素 */
+  --spacing-xs: 10px;
+  --spacing-sm: 20px;
+  --spacing-md: 30px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  
+  /* 字体大小变量 - 固定像素 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  
+  /* 容器最大宽度 */
+  --container-max-width: 1920px;
+  
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* 设置基础字体大小 */
+  font-size: var(--font-size-base);
+}
+
+/* 重置基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* PC端固定宽度容器 */
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* 响应式设计 - 移动端使用固定像素值 */
+@media (max-width: 768px) {
+  :root {
+    /* 使用固定像素值 */
+    --spacing-xs: 10px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    
+    /* 字体大小使用固定像素值 */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* 响应式图片 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 响应式按钮 */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--secondary-bg);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--border-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 移动端按钮样式 */
+@media (max-width: 768px) {
+  button {
+    border-radius: 8px;
+    font-size: max(var(--font-size-base), 14px);
+  }
+}
+
+/* 固定PC端布局的包装器 */
+.pc-wrapper {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .pc-wrapper {
+    width: 768px;
+    transform-origin: top left;
+    transform: scale(calc(100vw / 768));
+    height: auto;
+    margin: 0;
+  }
+}
+
+
+
+
