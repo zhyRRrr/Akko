@@ -1,0 +1,23 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 键盘PCB底板 -->
+  <rect x="20" y="80" width="260" height="100" rx="5" fill="#006633" stroke="#004422" stroke-width="2"/>
+  
+  <!-- 电路线路 -->
+  <path d="M30,100 H270 M30,120 H270 M30,140 H270 M30,160 H270" stroke="#cccccc" stroke-width="1" fill="none"/>
+  <path d="M50,90 V170 M90,90 V170 M130,90 V170 M170,90 V170 M210,90 V170 M250,90 V170" stroke="#cccccc" stroke-width="1" fill="none"/>
+  
+  <!-- 电子元件 -->
+  <rect x="40" y="110" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  <rect x="80" y="130" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  <rect x="120" y="110" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  <rect x="160" y="130" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  <rect x="200" y="110" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  <rect x="240" y="130" width="20" height="20" fill="#333" stroke="#222" stroke-width="1"/>
+  
+  <!-- 工具 -->
+  <rect x="50" y="20" width="200" height="40" rx="5" fill="#dddddd" stroke="#aaaaaa" stroke-width="2"/>
+  <circle cx="70" cy="40" r="10" fill="#ff6666" stroke="#cc3333" stroke-width="1"/>
+  <rect x="90" y="30" width="40" height="20" fill="#6666ff" stroke="#3333cc" stroke-width="1"/>
+  <polygon points="150,30 170,30 160,50" fill="#ffcc66" stroke="#cc9933" stroke-width="1"/>
+  <rect x="180" y="35" width="50" height="10" fill="#66cc66" stroke="#33aa33" stroke-width="1"/>
+</svg> 

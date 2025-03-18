@@ -1,0 +1,62 @@
+.image-flex-container {
+   width: 100%;
+   height: 540px;
+   max-width: 1920px;
+   margin: 0 auto;
+   padding: 60px 0;
+}
+
+.image-flex-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 24px;
+}
+
+.image-card {
+   min-width: 300px;
+   max-width: 705px;
+   height: 420px;
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+   .image-flex-container {
+      height: auto;
+      padding: 24px 0;
+      max-width: none;
+   }
+
+   .image-flex-wrapper {
+      flex-direction: column;
+      gap: 24px;
+      padding: 0 14px;
+   }
+
+   .image-card {
+      min-width: 100%;
+      max-width: 100%;
+      height: 200px;
+      border-radius: 0;
+   }
+
+   .image-card:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   }
+} 
